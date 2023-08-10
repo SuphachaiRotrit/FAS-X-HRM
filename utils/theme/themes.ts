@@ -1,0 +1,72 @@
+import { ThemeDefinition } from 'vuetify'
+
+const main: ThemeDefinition = {
+  dark: false,
+  colors: {
+    background: '#FFFFFF',
+    surface: '#FFFFFF',
+    primary: '#299BF8',
+    'primary-lighten-1': '#B5DDFE',
+    'primary-lighten-2': '#61B7FD',
+    'primary-lighten-3': '#7AC3FF',
+    'primary-lighten-4': '#B2DFDB',
+    'primary-lighten-5': '#E0F2F1',
+    'primary-darken-1': '#317AB7',
+    'primary-darken-2': '#00695C',
+    'primary-darken-3': '#004D40',
+    'primary-darken-4': '#01382F',
+    'primary-darken-5': '#002620',
+    secondary: '#5F5F5F',
+    'secondary-lighten-1': '#6B6B6B',
+    'secondary-lighten-2': '#8A8A8A',
+    'secondary-lighten-3': '#B6B6B6',
+    'secondary-lighten-4': '#C4C4C4',
+    'secondary-lighten-5': '#DCDCDC',
+    'secondary-lighten-6': '#F5F5F5',
+    'secondary-darken-1': '#535353',
+    'secondary-darken-2': '#4F4F4F',
+    'secondary-darken-3': '#383838',
+    'secondary-darken-4': '#181515',
+    'secondary-darken-5': '#000000',
+    error: '#DB6455',
+    info: '#4371CB',
+    success: '#4CBB85',
+    warning: '#FFCE21',
+  }
+}
+
+const dark: ThemeDefinition = {
+  dark: true,
+  colors: {
+    background: '#2F2F2F',
+    surface: '#464646',
+    primary: '#00897B',
+    'primary-lighten-1': '#26A69A',
+    'primary-lighten-2': '#4DB6AC',
+    'primary-lighten-3': '#80CBC4',
+    'primary-lighten-4': '#B2DFDB',
+    'primary-lighten-5': '#E0F2F1',
+    'primary-darken-1': '#00796B',
+    'primary-darken-2': '#00695C',
+    'primary-darken-3': '#004D40',
+    'primary-darken-4': '#01382F',
+    'primary-darken-5': '#002620',
+    secondary: '#5F5F5F',
+    'secondary-lighten-1': '#6B6B6B',
+    'secondary-lighten-2': '#8A8A8A',
+    'secondary-lighten-3': '#B6B6B6',
+    'secondary-lighten-4': '#C4C4C4',
+    'secondary-lighten-5': '#DCDCDC',
+    'secondary-darken-1': '#535353',
+    'secondary-darken-2': '#4F4F4F',
+    'secondary-darken-3': '#383838',
+    'secondary-darken-4': '#181515',
+    'secondary-darken-5': '#000000',
+    error: '#DB6455',
+    info: '#4371CB',
+    success: '#4CBB85',
+    warning: '#ECDF69',
+  }
+}
+
+export { main, dark }
