@@ -56,7 +56,7 @@ function manageModal (item: any, type:string) {
   .content-main
     widgets-header(textHeader="รายการข้อมูลพนักงาน" icon='mdi-account-multiple')
   .table.mt-6.d-flex.justify-center.text-center
-    v-card(mx-auto width="90%").mb-6
+    v-card(mx-auto width="90%" elevation='4').mb-6
       v-row.mt-2.px-2
         v-col(cols="4")
           v-text-field(

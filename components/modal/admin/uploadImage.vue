@@ -73,6 +73,7 @@ v-row.pt-4(v-if="!loading" justify='end')
                           v-row 
                             v-col(cols='12').align-self-center.pb-0
                               v-icon(class="fa-solid fa-file-upload fa-xl" style="color: #ffffff;")
+                              p.text-white.pt-2 เลือกรูปภาพจากไฟล์ หรือลากและวางที่นี่
                             v-col(cols='12' style="text-align-last: center;").px-8 
                               v-file-input(
                                   v-model="files"

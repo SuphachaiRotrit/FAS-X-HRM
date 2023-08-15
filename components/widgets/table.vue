@@ -40,7 +40,7 @@ const itemsPerPage = computed(() => {
 <template lang="pug">
 v-row(no-gutters)
   v-col(cols="12" :style="{ minHeight: fullHeight ? '650px' : 'auto' }")
-    v-card
+    v-card.v-sheet
       v-table(fixed-header fixed-footer)
         thead
           tr

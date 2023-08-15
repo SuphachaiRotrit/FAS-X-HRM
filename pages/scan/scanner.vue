@@ -65,10 +65,10 @@ currentTime();
           v-col(cols='12')
             v-card(maxheight="560px").bg-primary-lighten-2.v-sheet.pr-0          
               camera(:resolution="{ width: 1090, height: 603 }" ref="camera_cap" autoplay)
-          v-col(cols='12')
+          v-col(cols='12').pt-0.mt-0.pb-4.mb-6
             v-card.bg-primary-lighten-2.v-sheet.pr-0.text-center
               .text-center.d-flex.justify-center.align-center
-                v-card.bg-secondary-darken-3(width="20%" height="50px").mb-2
+                v-card.bg-secondary-darken-3(width="35%" height="50px").mb-2
                   .text-h3 {{ timeMer }}    
       v-col(cols='4').pl-0
         v-card(height="100%").bg-primary-lighten-2.v-sheet
@@ -122,9 +122,9 @@ currentTime();
               v-card.bg-warning.mb-2
                 v-row.pa-4 
                   v-col(cols='4')
-                    v-img(src="/noData.png" width="100px")
+                    v-img(src="/visitor.png" width="100px")
                   v-col(cols='8')
-                    .text-h6.mb-4 นายศุภชัย รอดฤทธิ์
+                    .text-h6.mb-4 ผู้มาเยือน
                     v-icon(class="fa-regular fa-clock")
                     span  16:24 น. 
                     v-icon(icon='mdi-close-circle' color="error")                      
