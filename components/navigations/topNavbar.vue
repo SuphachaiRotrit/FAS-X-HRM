@@ -17,7 +17,7 @@ v-card.bg-primary-lighten-1(width="100%").ma-0.pa-0.v-sheet
     v-col(cols='6')
       v-img(src="/logo.png" width="64px").ml-4
     v-col(cols='6').align-self-center  
-      v-btn(color="primary" @click='stream()' rounded).ml-12.bg-primary console
+      v-btn(color="primary" @click='stream()' rounded).ml-12.bg-primary console 
             
 </template>
 
