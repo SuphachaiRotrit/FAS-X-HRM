@@ -6,7 +6,7 @@ import { fa } from 'vuetify/iconsets/fa'
 import '@mdi/font/css/materialdesignicons.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import 'vuetify/dist/vuetify.min.css'
-import { main, dark } from '@/utils/theme/themes'
+import { main } from '@/utils/theme/themes'
 import { VDataTable } from 'vuetify/labs/VDataTable'
 import { VDatePicker } from 'vuetify/labs/VDatePicker'
 import { VSkeletonLoader } from 'vuetify/labs/VSkeletonLoader'
@@ -31,8 +31,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     theme: {
       defaultTheme: 'main',
       themes: {
-        main,
-        dark
+        main
       }
     },
     aliases: {
