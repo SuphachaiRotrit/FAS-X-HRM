@@ -21,10 +21,8 @@ const loading = ref<boolean>(false);
 const visible = ref<boolean>(false);
 const username = ref<string>('')
 const password = ref<string>('')
-const idName: string = 'login_page'
 
 const onSubmit = async () => {
-  // navigateTo('/home')
   if (!form.value) return
   if (username.value.length && password.value.length) {
     loading.value = true
@@ -85,7 +83,6 @@ const onSubmit = async () => {
                       variant="elevated"
                       color="primary"
                       ) LOGIN  
-                      //- type="submit"
                 v-col.text-center(cols="12")
                   p  
                     span.mr-2.text-secondary-lighten-2 {{ copyright }}

@@ -59,9 +59,9 @@ currentTime();
         v-col(cols='10').d-flex.justify-start.align-center  
           .text-white.nameLogo.pt-2 DUDEE INDEED Corporation
   v-card.v-sheet(height="100%")         
-    v-row(no-gutters)
+    v-row
       v-col(cols='8').pr-0.bg-primary-lighten-2
-        v-row(no-gutters)
+        v-row
           v-col(cols='12')
             v-card(maxheight="560px").bg-primary-lighten-2.v-sheet.pr-0          
               camera(:resolution="{ width: 1090, height: 603 }" ref="camera_cap" autoplay)
@@ -72,7 +72,7 @@ currentTime();
                   .text-h3 {{ timeMer }}    
       v-col(cols='4').pl-0
         v-card(height="100%").bg-primary-lighten-2.v-sheet
-          v-row(no-gutters) 
+          v-row
             v-col(cols='12').px-6
               v-card.bg-primary-lighten-1.mb-2
                 v-row.pa-4 

@@ -14,7 +14,7 @@ const useAuth = async function (user: string, pass: string) {
       password: pass,
     }),
   });
-  const { data, error } = await useFetch("/home", options);
+  const { data, error } = await useFetch("home", options);
 
   if (error.value) {
     mainStore.snackbarData.title = "เข้าสู่ระบบไม่สำเร็จ";

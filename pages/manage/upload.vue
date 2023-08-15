@@ -46,14 +46,14 @@ modal-admin-upload-camera(:loading="loading" :show="showModal1")
             v-row.mb-4
               v-col(cols="12")
                 .text-subtitle-1.text-white เลือกรูปแบบการอัพโหลดรูป
-              v-col(cols="6").d-flex.justify-end
+              v-col(cols="12" md='6').d-flex.justify-center
                 v-btn(color="primary-lighten-2" width="160px" height="100px" @click="camera()").d-flex.justify-center
                   v-row
                     v-col(cols="12")
                       v-icon(class="fa-solid fa-video fa-xl" style="color: #ffffff;")
                     v-col(cols="12")
                       p.text-white เว็บแคม   
-              v-col(cols="6").d-flex.justify-start
+              v-col(cols="12" md='6').d-flex.justify-center
                 v-btn(color="primary-lighten-2" width="160px" height="100px" @click="manageModal({}, 'upload')").d-flex.justify-center
                   v-row
                     v-col(cols="12")

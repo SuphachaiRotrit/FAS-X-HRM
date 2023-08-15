@@ -28,15 +28,13 @@ v-row.pt-4(v-if="!loading || !isLoading" justify='end')
     v-card.align-center.pa-3(height="100%" color="#F2F2F2" elevation="0")
       v-row
         v-col(cols='12')
-          .container
-            .pt-4.d-flex.justify-end.mr-13
+            .pt-4.d-flex.justify-center
               v-btn.mx-2(
               elevation="2"
               variant="text"
               :loading="isLoading || loading"
               @click='cancel').bg-primary 
                 span ย้อนกลับ      
-          .container
             widgets-header(textHeader="แก้ไขข้อมูลพนักงาน" icon='fa:fas fa-pencil-alt')
             modal-admin-employee    
 </template>

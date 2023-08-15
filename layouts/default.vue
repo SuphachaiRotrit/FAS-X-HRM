@@ -1,6 +1,14 @@
+<script setup lang="ts">
+import { useDisplay } from 'vuetify'
+import { useMainStore } from '~/store'
+
+const mainStore = useMainStore()
+const { smAndUp, platform } = useDisplay()
+
+</script>
 <template lang="pug">
 v-app(id="__default_layout" full-height)
-  navigations-top-navigation
+  //- navigations-top-navigation
   v-main.pt-16.bg-background(id="main ")
     v-container.pa-8(id="main-container")
       slot

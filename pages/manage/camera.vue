@@ -69,15 +69,13 @@ function removeImage(data: any) {
   v-card.align-center.pa-3(height="100%" color="#E7F4FF" elevation="0")
     v-row(no-gutters)
       v-col(cols='12' style="text-align: -webkit-center;")
-        .container
-          .pt-4.d-flex.justify-end
+          .pt-4.d-flex.justify-center
             v-btn(
                   elevation="2"
                   variant="text"
                   :loading="isLoading || loading"
                   @click='cancel').bg-primary 
               span ย้อนกลับ      
-        .container.mb-4
           .header.d-flex.justify-center.text-center
             v-card(width="100%").mt-8
               v-form  
@@ -115,6 +113,3 @@ function removeImage(data: any) {
                     v-btn.mb-4.bg-success(:loading='loading' @click='uploadImage').mt-4 อัพโหลด          
                                     
   </template>
-<style>
-
-</style>

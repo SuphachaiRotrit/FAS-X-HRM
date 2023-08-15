@@ -53,19 +53,18 @@ v-row.pt-4(v-if="!loading" justify='end')
       v-row
         v-col(cols='12')
           .container
-            .pt-4.d-flex.justify-end.mr-13
+            .pt-4.d-flex.justify-center
               v-btn.mx-2(
                 elevation="2"
                 variant="text"
                 :loading="isLoading || loading"
                 @click='cancel').bg-primary 
                 span ย้อนกลับ      
-          .container
             .header.d-flex.justify-center.text-center
               v-card(width="90%").mt-8
                 v-form  
                   v-row
-                    v-col(cols='7').pr-0
+                    v-col(cols='12' md='7').pr-0
                       v-card.bg-primary-lighten-1(style="minHeight:550px")
                         v-card-title
                           v-card-text 
@@ -91,7 +90,7 @@ v-row.pt-4(v-if="!loading" justify='end')
                                   template( v-for="(fileName, index) in fileNames" :key="fileName")
                                     v-chip(v-if="index < 2" color="white" label size="small" class="me-2") {{ fileName }}
                                     span(v-else-if="index === 2" class="text-overline text-grey-darken-3 mx-2") +{{ files.length - 2 }} ไฟล์
-                    v-col(cols='5').pl-0
+                    v-col(cols='12' md='5').pl-0
                       v-card 
                         v-card-title
                           v-card-text ตัวอย่างรูปภาพ : 0/10
