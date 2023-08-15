@@ -55,5 +55,5 @@ function manageModal() {
           v-btn(color="warning" @click="manageModal()").text-white
             span เพิ่มรูป
         v-col(cols='12')
-          widgets-boxImages(fullHeight )         
+          widgets-boxImages(fullHeight)         
   </template>

@@ -1,11 +1,31 @@
 <script setup lang="ts">
 import { useDisplay, useTheme } from 'vuetify'
+import { useMainStore } from '~/store'
+import { useUserStore } from '~/store/user'
+
+
+// reset token logout
+const userStore = useUserStore()
+const { resetAccessToken, userInfo } = userStore
+// Setup Store
+const mainStore = useMainStore()
+// composables
 const { smAndUp, mdAndDown, mdAndUp, lgAndUp, platform } = useDisplay()
 const { nuxtApp } = useNuxtApp()
+// States / Actions / Getters
+const { toggleDrawer, toggleRail } = mainStore
+const railConfig = computed(() => mainStore.rail)
+const scrollPosition = ref(0)
+const route = useRoute()
+
+function onScroll(event: any) {
+  scrollPosition.value = window.scrollY || event.target?.scrollTop || 0
+}
 
 function logOut() {
-  navigateTo('/login')
+  resetAccessToken()
 }
+
 function stream() {
   navigateTo('/scan/scanner')
 }
@@ -31,7 +51,7 @@ v-app
             v-list-item
               .text-center.py-2
                 .text-subtitle-1.font-weight-bold ข้อมูลโปรไฟล์
-                .text-subtitle-1  Username : admin101
+                .text-subtitle-1  Username : admin101 {{ userInfo.name }}
                 .text-subtitle-1 ID : 1234568
               v-card( variant="outlined" color="error" @click="logOut()")
                 v-btn.px-2( variant="text" color="error" block)
