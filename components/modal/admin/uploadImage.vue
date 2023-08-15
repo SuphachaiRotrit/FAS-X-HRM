@@ -8,7 +8,8 @@ const props = withDefaults(defineProps<Props>(), {
   loading: false,
   show: false,
 })
-const files = ref([])
+const files = ref()
+const cameraImages = ref<any>([])
 const loading = ref(false)
 const emit = defineEmits(['cancel', 'save'])
 const dialog = ref<boolean>(false)
@@ -17,8 +18,28 @@ function cancel () {
   emit('cancel')
   dialog.value = false
 }
+async function snapshot() {
+  const file = new File(['hoge'], 'sample.txt', { type: 'text/plain' })
+  const blob = new Blob([file], { type: file.type })
+  // const blob = await files.value
+  // // const url = URL.createObjectURL(blob)
+  cameraImages.value.push({
+    blob: blob,
+    // preview: url,
+  })
+  
+}
+function removeImage(data: any) {
+  const index = cameraImages.value.findIndex((item: any) => {
+    return item.preview === data;
+  });
+  if (index !== -1) {
+    cameraImages.value.splice(index, 1);
+  }
+}
 function uploadImage() {
   console.log('files',files.value);
+  snapshot()
 }
 // isLoading.value = true
 watch (() => props.show, (value) => {
@@ -56,6 +77,7 @@ v-row.pt-4(v-if="!loading" justify='end')
                             v-col(cols='12' style="text-align-last: center;").px-8 
                               v-file-input(
                                   v-model="files"
+                                  accept="image/png, image/jpeg"
                                   color="white"
                                   counter
                                   label="ไฟล์รูปภาพที่อัพโหลด"
@@ -73,7 +95,10 @@ v-row.pt-4(v-if="!loading" justify='end')
                       v-card 
                         v-card-title
                           v-card-text ตัวอย่างรูปภาพ : 0/10
-                        widgets-boxImages
+                          .img-pp(v-for='item in cameraImages')
+                            p {{ item }}
+                            v-img(:src="item.preview")
+                        widgets-boxImages(:cameraImages='cameraImages' @deleteImage='removeImage')
                         v-btn.mb-5.bg-success(@click='uploadImage') อัพโหลด      
                    
                     

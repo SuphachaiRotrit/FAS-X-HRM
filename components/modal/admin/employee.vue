@@ -7,7 +7,7 @@ function manageModal() {
 }
 </script>
 <template lang="pug"> 
-.header.d-flex.justify-center.text-center
+.table.mt-6.d-flex.justify-center.text-center
   v-card(color="white" mx-auto width="90%").mt-6
     v-card-title.bg-primary-lighten-1.text-start 
       .text-h6.pl-4 ข้อมูลพนักงาน
@@ -55,5 +55,5 @@ function manageModal() {
           v-btn(color="warning" @click="manageModal()").text-white
             span เพิ่มรูป
         v-col(cols='12')
-          widgets-boxImages(fullHeight)         
+          widgets-boxImages(fullHeight )         
   </template>

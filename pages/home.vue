@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import type { ITableInfo } from '~/types/employee'
+definePageMeta({
+  middleware: 'auth'
+})
 const idName = ref('home_page')
 const loading = ref(false)
-const checkStatus = ref(true)
+const checkStatus = ref(false)
 const showModal = ref<boolean>(false)
 const showDeleteModal = ref<boolean>(false)
 const tableInfo: ITableInfo = reactive({
@@ -48,13 +51,13 @@ function manageModal (item: any, type:string) {
     :loading="loading"
     :show="showModal"
     )   
-.page-wrapper
+.page-wrapper.bg-background
   navigations-top-navigation    
   .content-main
     widgets-header(textHeader="รายการข้อมูลพนักงาน" icon='mdi-account-multiple')
   .table.mt-6.d-flex.justify-center.text-center
-    v-card(mx-auto width="90%").pa-2
-      v-row.mt-2
+    v-card(mx-auto width="90%").mb-6
+      v-row.mt-2.px-2
         v-col(cols="4")
           v-text-field(
             color="primary"

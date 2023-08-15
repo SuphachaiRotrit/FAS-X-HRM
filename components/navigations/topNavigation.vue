@@ -6,6 +6,9 @@ const { nuxtApp } = useNuxtApp()
 function logOut() {
   navigateTo('/login')
 }
+function stream() {
+  navigateTo('/scan/scanner')
+}
 </script>
 
 <template lang="pug">
@@ -16,7 +19,7 @@ v-app
     rounded
     color="primary-lighten-1"
   )
-    v-btn(icon="mdi-monitor-multiple" color="white").ml-12.bg-primary
+    v-btn(icon="mdi-monitor-multiple" color="white" @click='stream()').ml-12.bg-primary
     v-img(src="logo.png" width="64px")
     template(#append)
       v-card(elevation="0" color="transparent").mr-6

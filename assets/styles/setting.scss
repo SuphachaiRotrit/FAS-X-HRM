@@ -1,0 +1,16 @@
+$body-font: "Bree Serif", "Pridi", sans-serif;
+$heading-font: "Bree Serif", "Pridi", sans-serif;
+$custom-base-font: 16px;
+$override-container: (
+  'lg': 900px,
+  'xl': '1440px'
+);
+
+
+@forward 'vuetify' with (
+  $reset: 'false',
+  $utilities: 'false',
+  $body-font-family: $body-font,
+  $heading-font-family: $heading-font,
+  $font-size-root: $custom-base-font,
+);

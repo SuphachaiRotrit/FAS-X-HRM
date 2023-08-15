@@ -3,7 +3,7 @@
 definePageMeta({
   middleware: 'auth'
 })
-navigateTo('/login')
+navigateTo('/home')
 </script>
 
 <template lang="pug">

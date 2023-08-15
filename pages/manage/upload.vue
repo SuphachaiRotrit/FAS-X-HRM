@@ -6,6 +6,9 @@ const showModal = ref<boolean>(false)
 const showModal1 = ref<boolean>(false)
 const showDeleteModal = ref<boolean>(false)
 const isLoading = ref<boolean>(false)
+function camera(){
+  navigateTo('/manage/camera')
+}
 function cancel () {
   emit('cancel')
   navigateTo('/home')
@@ -29,7 +32,7 @@ modal-admin-upload-camera(:loading="loading" :show="showModal1")
 .login-page.mt-8
   v-row
     v-col(cols='12')
-      .pt-4.d-flex.justify-end.mr-13.pr-6
+      .pt-4.d-flex.justify-center
         v-btn.mx-2(
                 elevation="2"
                 variant="text"
@@ -44,7 +47,7 @@ modal-admin-upload-camera(:loading="loading" :show="showModal1")
               v-col(cols="12")
                 .text-subtitle-1.text-white เลือกรูปแบบการอัพโหลดรูป
               v-col(cols="6").d-flex.justify-end
-                v-btn(color="primary-lighten-2" width="160px" height="100px" @click="manageModal({}, 'webcam')").d-flex.justify-center
+                v-btn(color="primary-lighten-2" width="160px" height="100px" @click="camera()").d-flex.justify-center
                   v-row
                     v-col(cols="12")
                       v-icon(class="fa-solid fa-video fa-xl" style="color: #ffffff;")

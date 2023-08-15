@@ -1,0 +1,47 @@
+// ========= CUSTOM =========
+// html, body, __nuxt {
+//   overflow: hidden;
+//   height: 100vh;
+// }
+// #app {
+//   position: relative;
+//   overflow: auto;
+//   height: 100vh;
+// }
+// body::-webkit-scrollbar {
+//   display: none;
+// }
+::-webkit-scrollbar {
+  z-index: 99999;
+  width: 8px !important;
+  height: 8px !important;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ededed !important;
+  border-radius: 8px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #616161 !important;
+  border-radius: 8px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #424242 !important;
+}
+#main-container {
+  min-height: calc(100% - 24px);
+  width: 100%;
+  max-width: unset;
+}
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
